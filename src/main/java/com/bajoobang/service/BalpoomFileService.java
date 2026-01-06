@@ -7,6 +7,8 @@ import com.bajoobang.repository.BalpoomFileRepository;
 import com.bajoobang.repository.RequestRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -22,6 +24,9 @@ import java.util.List;
 public class BalpoomFileService {
     private final BalpoomFileRepository balpoomFileRepository;
     private final RequestRepository requestRepository;
+
+    @Value("${file.img-dir}")
+    private String imgDir;
 
     public void saveFile(List<MultipartFile> files, Long request_id) throws IOException {
         Request request = requestRepository.findById(request_id)
@@ -48,22 +53,13 @@ public class BalpoomFileService {
     }
 
     private Path getFileStorageLocation(String filename){
-        // "/home/chldntjd49/chldntjd49/images/"
-        // "C:\\Users\\i1t28\\OneDrive\\Desktop\\2-2\\2024-1-OSSP2-team-6-BaJooBang\\BaJooBang\\src\\main\\resources\\templates"
-        // "/Users/woosungchoi/study/file"
-        // "/Users/woosungchoi/study/file"
-        // /Users/woosungchoi/Desktop/mypage/2024-1-OSSP2-team-6-BaJooBang/BaJooBang/src/main/frontend/public
 
         // 서버에 저장할 진짜 경로
-//        return Paths.get("/home/chldntjd49/bajoobang/images/").resolve(filename).normalize();
-        return Paths.get("/Users/woosungchoi/study/file").resolve(filename).normalize();
+        return Paths.get(imgDir).resolve(filename).normalize();
 
     }
     private Path getLocationFake(String filename){
-        // "/home/chldntjd49/chldntjd49/images/"
-        // "C:\\Users\\i1t28\\OneDrive\\Desktop\\2-2\\2024-1-OSSP2-team-6-BaJooBang\\BaJooBang\\src\\main\\resources\\templates"
-        // "/Users/woosungchoi/study/file"
-
+        
         // 통신에서 사용할 가짜 경로
         return Paths.get("/attach/images/").resolve(filename).normalize();
 

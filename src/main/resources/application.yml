@@ -1,0 +1,34 @@
+spring:
+  config:
+    import: optional:file:.env[.properties]
+  application: 
+    name: bajoobang-v2
+  servlet: 
+    multipart: 
+      max-file-size: 50MB
+      max-request-size: 50MB
+  jpa: 
+    hibernate: 
+      ddl-auto: ${JPA_DDL_AUTO:validate}
+    properties: 
+      hibernate: 
+        format_sql: true
+    show-sql: ${JPA_SHOW_SQL:false}
+  datasource:
+    url: "${DB_URL:jdbc:mysql://localhost:3306/bajoobang}"
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: "${DB_USERNAME:root}"
+    password: "${DB_PASSWORD:}"
+
+app:
+  base-url: "${SERVER_BASE_URL:http://localhost:8080}"
+
+file:
+  img-dir: "${IMG_DIR:/Users/woosungchoi/study/file/}"
+
+pay: 
+  admin-key: "${PAY_ADMIN_KEY}"
+
+geo: 
+  api-key: "${GEO_API_KEY}"
+  url: "https://dapi.kakao.com/v2/local/search/address.json"

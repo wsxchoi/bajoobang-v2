@@ -1,5 +1,6 @@
 package com.bajoobang;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.converter.ByteArrayHttpMessageConverter;
 import org.springframework.http.converter.HttpMessageConverter;
@@ -11,6 +12,10 @@ import java.util.List;
 
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
+    
+    @Value("${file.img-dir}")
+    private String imgDir;
+
     @Override
     public void extendMessageConverters(List<HttpMessageConverter<?>> converters) {
         converters.add(new ByteArrayHttpMessageConverter());
@@ -19,8 +24,7 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void  addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/attach/images/**") // --1
-                .addResourceLocations("file:///Users/woosungchoi/study/file/"); //--2
-        // .addResourceLocations("file:///home/chldntjd49/bajoobang/images/");
+                .addResourceLocations("file://" + imgDir); //--2
     }
 
     @Override

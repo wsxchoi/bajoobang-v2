@@ -37,4 +37,8 @@ out/
 .vscode/
 
 # secret
+.env
 src/main/resources/application-secret.properties
+
+# ignore
+uploads/

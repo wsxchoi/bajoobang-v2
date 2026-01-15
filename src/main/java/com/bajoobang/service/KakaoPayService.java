@@ -30,9 +30,12 @@ import java.util.Optional;
 public class KakaoPayService {
     private final RequestRepository requestRepository;
     private final OrderRepository orderRepository;
-    
+
     @Value("${pay.admin-key}")
     private String adminKey;
+
+    @Value("${app.base-url}")
+    private String baseUrl;
 
     public PayRequest getReadyRequest(Long id, PayInfoDto payInfoDto){
         Map<String, String> map = new HashMap<>();
@@ -68,17 +71,11 @@ public class KakaoPayService {
         // redirect할 url로 위에서 설명한 동작 과정에서 5번과 6번 사이 과정에서
         // 나온 결과로 이동할 url을 설정해 주는 것입니다.
 
-        // 로컬
-        map.put("approval_url", "http://localhost:8000/payment/success"+"/"+orderId); // 성공 시 redirect url
+        
+        map.put("approval_url", baseUrl+"/payment/success"+"/"+orderId); // 성공 시 redirect url
         // 뒤에 경로 변수로 멤버id값을 추가함
-        map.put("cancel_url", "http://localhost:8000/payment/cancel"); // 취소 시 redirect url
-        map.put("fail_url", "http://localhost:8000/payment/fail"); // 실패 시 redirect url
-
-        // 배포
-//        map.put("approval_url", "http://35.216.29.229:8000/payment/success"+"/"+orderId); // 성공 시 redirect url
-//        // 뒤에 경로 변수로 멤버id값을 추가함
-//        map.put("cancel_url", "http://35.216.29.229:8000/payment/cancel"); // 취소 시 redirect url
-//        map.put("fail_url", "http://35.216.29.229:8000/payment/fail"); // 실패 시 redirect url
+        map.put("cancel_url", baseUrl + "/payment/cancel"); // 취소 시 redirect url
+        map.put("fail_url", baseUrl+"/payment/fail"); // 실패 시 redirect url
 
         return new PayRequest("https://open-api.kakaopay.com/online/v1/payment/ready",map);
     }

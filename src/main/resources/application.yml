@@ -1,24 +1,25 @@
 spring:
-  config:
-    import: optional:file:.env[.properties]
   application: 
-    name: bajoobang-v2
+    name: bajoobang
   servlet: 
     multipart: 
       max-file-size: 50MB
       max-request-size: 50MB
   jpa: 
     hibernate: 
-      ddl-auto: ${JPA_DDL_AUTO:validate}
+      ddl-auto: ${SPRING_JPA_HIBERNATE_DDL_AUTO:none}
     properties: 
       hibernate: 
         format_sql: true
-    show-sql: ${JPA_SHOW_SQL:false}
+    show-sql: ${SPRING_JPA_SHOW_SQL:false}
   datasource:
-    url: "${DB_URL:jdbc:mysql://localhost:3306/bajoobang}"
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: "${DB_USERNAME:root}"
-    password: "${DB_PASSWORD:}"
+    url: "${SPRING_DATASOURCE_URL:jdbc:mysql://localhost:3306/bajoobang}"
+    username: "${SPRING_DATASOURCE_USERNAME:root}"
+    password: "${SPRING_DATASOURCE_PASSWORD:}"
+    
+server:
+  port: ${SERVER_PORT:8080}
 
 app:
   base-url: "${SERVER_BASE_URL:http://localhost:8080}"

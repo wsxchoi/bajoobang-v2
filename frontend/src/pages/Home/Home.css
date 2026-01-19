@@ -1,0 +1,153 @@
+/* 전체 레이아웃 및 스타일 */
+.Homepage {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: #F3ECDC; /* 배경색을 연한 베이지 톤으로 설정 */
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #4f6a4d; /* 로고 색상 */
+}
+
+.navbar a {
+  color: #000; /* 네비게이션 글씨 색상을 검정색으로 설정 */
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.auth-buttons .login-btn {
+  background-color: #E8E5D4;
+  color: #3A3A3A;
+  padding: 10px 20px;
+  border: 2px solid #bbb; /* 테두리를 추가 */
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+/* 메인 콘텐츠 스타일 */
+.main-content {
+  text-align: center;
+  padding: 100px 20px;
+  color: #4f6a4d; /* 메인 타이틀 색상 */
+}
+
+.main-title {
+  font-size: 48px;
+  color: #344E41; /* 메인 타이틀 색상 */
+}
+.main-title2 {
+  font-size :40px;
+  color :#A3B18A;
+}
+
+.description {
+  font-size: 16px;
+  margin: 20px 0;
+  color: #000000;
+  text-align: left;
+  padding-left: 515px;
+}
+
+.buttons {
+  margin-top: 30px;
+}
+
+.main-button1 {
+  background-color: #A3B18A;
+  color: #344E41;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 30px;
+  margin: 10px;
+  font-size: 16px;
+  margin-right: 60px;
+}
+.main-button2 {
+  background-color: #344E41;
+  color: #ffffff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 30px;
+  margin: 10px;
+  font-size: 16px;
+}
+
+/* 푸터 스타일 */
+
+.footer {
+  background-color: #2F4A3D; 
+  color: #F3ECDC;
+  padding: 40px 0;
+  text-align: center;
+  align-items: center;
+}
+
+.footer-content {
+  display: flex;
+  align-items: flex-start;
+  margin: 0 ;
+  padding: 10px 60px;
+}
+
+.footer-logo {
+  font-size: 32px; 
+  color: #908f8c; 
+}
+
+.footer-content p {
+  font-size: 14px;
+  color: #B2B2B2; 
+  margin: 5px 0;
+  
+}
+.footer-column{
+  margin-right: 80px;
+  margin-left:40px;
+}
+.footer-column h4 {
+  font-size: 23px;
+  color: #F3ECDC; 
+  margin-top: 0px;
+}
+
+.footer-column p, .footer-column a {
+  font-size: 14px;
+  color: #F3ECDC; 
+  margin: 5px 0;
+}
+
+.footer-column a {
+  text-decoration: none;
+  display: flex;
+}
+
+.footer-column a:hover {
+  color: #ffffff; 
+}
+
+.footer-links {
+  display: flex;
+  gap: 30px; 
+}
+
+.footer-column {
+  flex: 1; 
+}
+
+.footer-logo {
+  flex: 2; 
+}
+
+.footer-column p {
+  margin-bottom: 10px; 
+  display: flex;
+}
+
+.footer-column p:last-child {
+  margin-bottom: 0; 
+}
+

@@ -1,0 +1,174 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  position: relative;
+}
+
+.leftinfo {
+  width: 70%;
+  margin-left: 30px;
+  padding-bottom: 100px; /* Ensure some padding at the bottom */
+}
+
+.rightinfo {
+  position: fixed;
+  top: 12vw; /* Adjusted to align with the desired top margin */
+  right: 10vw;
+  width: 300px;
+  height: calc(100% - 80px); /* Ensure it doesn't overflow the viewport */
+  border-left: 0px;
+  margin-right: 50px;
+}
+
+.card {
+  background-image: '../components/images/profile.svg';
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding-top: 3vw;
+  text-align: center;
+  width: 20vw;
+  height: 23vw;
+  background-color: #F6F7F8;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  font-size: 15px;
+  color: #333;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.profile .avatar {
+  background-image: '../components/images/profile_circle.svg';
+  background-size: cover;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+}
+
+.profile .name {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 2.5vw;
+}
+
+.contact-info {
+  width: 15vw;
+  height: 10vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 20px;
+  padding-bottom: 1vw;
+  gap: -1vw; /* 요소들 간의 간격을 줄이기 위해 추가 */
+}
+
+.contact-details p {
+  color: #666;
+  font-size: 14px;
+  margin: 0; /* 기본 margin 제거 */
+  padding: 0vw 0; /* 상하 padding을 추가하여 간격 조절 */
+}
+
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  width: 20vw;
+  margin-top: 1.4vw;
+}
+
+.actions .btn {
+  background: #f2f2f2;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 8px;
+  cursor: pointer;
+  flex-basis: 48%;
+}
+
+.actions .btn.heart {
+  color: darkgray;
+  font-weight: bold;
+}
+
+.actions .btn.message {
+  color: darkgray;
+  font-weight: bold;
+}
+
+#naming {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+
+#moneying {
+  color: grey;
+  font-size: 18px;
+  margin-top: 1px;
+}
+
+#house_detail {
+  display:inline-flex;
+  align-items: flex-start;
+  background-image: url('../components/images/detailback.svg');
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top:30px;
+  padding: 2vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+#house_detail_title {
+  margin-right: 8vw;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* 요소들 간의 간격을 20px로 설정합니다. 필요에 따라 조절할 수 있습니다. */
+}
+.house_detail_more{
+  margin-left:3vw;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.detailblank {
+  width: 100px;
+  display: inline-block;
+}
+
+#house_info {
+  margin-left: 20px;
+}
+
+#house_image {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.helpinfoBtn {
+  width: 8vw;
+  height: 3.5vw;
+  border-radius: 20px; 
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+}

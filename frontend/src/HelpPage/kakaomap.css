@@ -1,0 +1,164 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.map_wrap {
+  display: flex;
+  flex-direction: row;
+  height: 83vh; 
+  border-top: 1px solid gray;
+}
+h3{
+  margin:0px;
+}
+#map {
+  flex: 1 1 75%; 
+  position: relative;
+  overflow: hidden;
+}
+
+#menu_wrap {
+  height: 100%;
+  flex: 1 1 25%;
+  padding: 0px;
+  overflow-y: scroll;
+  border-left:1px solid gray;
+}
+
+
+#menu_wrap li p {
+  margin: 5px 0;
+}
+
+#menu_wrap ol {
+  padding-left:0px;
+  margin : 0px;
+}
+
+#menu_wrap li p {
+  margin: 5px 0;
+}
+
+#menu_wrap li .location {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#menu_wrap li .rent {
+  font-size: 14px;
+}
+
+#menu_wrap li .details {
+  font-size: 14px;
+}
+
+#menu_wrap li .details span {
+  font-weight: bold;
+}
+
+#menu_wrap li .details .divider {
+  margin: 0 5px;
+}
+
+#menu_wrap li {
+  list-style: none;
+  margin-bottom: 0px;
+  padding: 15px;
+  background-color: #f9f9f9;
+
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid gray;
+}
+
+
+
+#menu_wrap li p {
+  margin: 7px 0;
+  font-size: 14px;
+}
+
+#menu_wrap li .location {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#menu_wrap li .rent {
+  font-size: 14px;
+}
+
+#menu_wrap li .details {
+  font-size: 14px;
+}
+
+#menu_wrap li .details span {
+  font-weight: bold;
+}
+
+#menu_wrap li .details .divider {
+  margin: 0 5px;
+}
+
+#menu_wrap ol {
+  padding-left: 0;
+  margin: 0;
+}
+#menu_wrap li .rent span,
+#menu_wrap li .details span {
+  color: green;
+}
+.blank{
+  width: 10px; /* 너비 지정 */
+  height: 20px; /* 높이 지정 */
+  display: inline-block;
+}
+
+.blank_gray{
+  background-color: rgba(236, 236, 236, 1);
+  border-radius: 5px;
+  width: 50px; /* 너비 지정 */
+  height: 20px; /* 높이 지정 */
+  display: inline-block; /* 인라인 요소를 블록 요소로 변경하여 너비와 높이 적용 */
+  text-align: center; /* 내용 가운데 정렬 */
+  line-height: 20px; /* 텍스트 세로 중앙 정렬을 위한 높이 값 */
+  margin: 0px; /* 여백 조절 */
+}
+
+.favorite-button {
+  background: none;
+  border: none;
+  color: black; /* 텍스트 색상을 검정으로 설정 */
+  font-size: 14px; /* 하트 크기 조정 */
+  flex-direction: column;
+  font-weight: 400;
+  cursor: pointer;
+  padding-left: 10px;
+  margin: 0px;
+}
+
+.heart-red {
+  color: red; /* 하트 부분만 빨간색으로 설정 */
+}
+
+.text-normal {
+  color: black; /* 나머지 텍스트는 검정색으로 유지 */
+}
+
+.helpMapTitle{
+  font-size: 20px;
+  color: black; /* 파란색 대신 원하는 색으로 변경 */
+  text-decoration: none;
+  margin:0px;
+}
+
+.helpMapRequest{
+  color: black; /* 파란색 대신 원하는 색으로 변경 */
+  text-decoration: none;
+}
+
+.helpMapPrice{
+  font-size: 5px;
+  font-weight: 600;
+  color: black;
+}

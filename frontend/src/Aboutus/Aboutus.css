@@ -1,0 +1,82 @@
+.container3 {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial, sans-serif';
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+.avatar {
+  width: 300px;  /* 이미지의 너비를 100px로 설정 */
+  height: 200px; /* 이미지의 높이를 100px로 설정 */
+  margin-bottom: 10px;
+}
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+  color: #3A5935;
+}
+
+.navbar {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-item {
+  font-size: 18px;
+  color: #3A5935;
+  text-decoration: none;
+}
+
+.nav-item:hover {
+  text-decoration: underline;
+}
+
+.login {
+  font-size: 18px;
+  color: #3A5935;
+  text-decoration: none;
+}
+
+.team-section {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.team-row {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 20px;
+  
+}
+
+.team-member {
+  text-align: center;
+}
+
+
+.department {
+  font-size: 20px;
+  color: #344E41;
+  font-weight: 600;
+}
+
+.name {
+  font-size: 18px;
+  color: #344E41;
+  font-weight: 300;
+}
+
+.role-label {
+  font-size: 40px;
+  font-weight: bold;
+  color: black;
+  margin-top: 100px;
+}

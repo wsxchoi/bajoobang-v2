@@ -1,0 +1,12 @@
+.screen{
+  height: 100%;
+}
+.top-controls {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;  
+}
+.label-container {
+  padding-left: 20px; /* Adjust the value as needed */
+  padding-bottom:4px;
+}

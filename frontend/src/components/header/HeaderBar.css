@@ -1,0 +1,63 @@
+/* Header 전체 스타일 */
+.header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  background-color:none; /* 배경 색상 조정 */
+}
+
+/* 로고 스타일 */
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #588157; /* 로고 색상 조정 */
+  text-decoration: none;
+}
+
+.logo h1 {
+  margin: 0;
+  color: #588157;
+  font-family: 'Arial', sans-serif;
+}
+
+/* 네비게이션 스타일 */
+.navbar {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-item {
+  color: #000000 !important; /* 네비게이션 항목 색상 검정색으로 설정 */
+  text-decoration: none;
+  font-size: 16px;
+  padding-right: 50px;
+  transition: color 0.3s ease;
+}
+
+.nav-item:hover,
+.nav-item.active {
+  color: #4f6a4d !important; /* 활성화된 항목 및 hover 시에도 검정색 유지 */
+}
+
+/* 로그인/회원가입 버튼 스타일 */
+.auth-buttons .login-btn {
+  background-color: #ffffff !important;
+  color: #3a3a3a;
+  padding: 10px 20px;
+  border: 2px solid #ffffff; /* 테두리 추가 */
+  border-radius: 20px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.auth-buttons .login-btn:hover {
+  background-color: #d4c9b3 !important;
+  color: #2f2f2f;
+}
+
+/* 전체 레이아웃 조정 */
+.header-bar {
+  height: 80px;
+}

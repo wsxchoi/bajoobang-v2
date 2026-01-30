@@ -72,6 +72,6 @@ jobs:
             echo "${{ secrets.ENV_PROD }}" > .env
             # 업로드 폴더 생성 및 권한 부여
             mkdir -p uploads && chmod 777 uploads
-            docker-compose pull
-            docker-compose up -d
+            docker compose pull
+            docker compose up -d
             docker image prune -f
